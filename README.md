@@ -1,29 +1,25 @@
-# Real Estate Listing API - Screening Project for Senior C# Developers
+# Plácido's Code Challenge - Real Estate Listing API
 
 ## Overview
-This Real Estate Listing API serves as a baseline project for assessing the skills of candidates applying for the Senior C# Developer position. It utilizes .NET 6 with an in-memory database managed by Entity Framework Core, and is documented using Swagger.
+This is my implementation of the Code Challenge.
+Here I implemented as requested the following practices:
+- A small "Clean Code" Architecture
+- Dependency Injection
+- Unit of Work
+- Repository pattern
+- A new DELETE endpoint
+- Unit testing
+- Docker file to run the code inside a container
+- Changed the database from InMemory to SQLite (SQLite supports transactions)
 
-## Purpose
-The project is designed to evaluate candidates' proficiency in enhancing an existing API framework by adhering to best practices in coding, implementing design patterns, and ensuring the application's scalability and maintainability.
+Please note the following:
+- Use `docker build` in the `Dockerfile` directory to create an image.
+- Use `docker run` to run the created image.
+- Use `dotnet test` to run the unit tests.
+- Use `dotnet run` to execute the API.
 
-## Technical Specifications
-- **Framework:** .NET 8
-- **Database:** In-Memory Database (Entity Framework Core)
-- **API Documentation:** Swagger/OpenAPI
 
-## Project Setup
-To run this project locally:
-
-1. Install the .NET SDK on your machine.
-2. Clone the repository to your preferred location.
-3. Open a terminal at the project's root directory.
-4. Run the following commands:
-   ```bash
-   dotnet restore
-   dotnet build
-   dotnet run `
-
-1.  Navigate to `http://localhost:(5236 or 7289)/swagger` in your browser to interact with the API using Swagger UI.
+Here is a brief resume of what the challenge asked me to.
 
 Candidate Enhancement Tasks
 ---------------------------
@@ -47,11 +43,3 @@ As a candidate for the Senior C# Developer position, you are expected to expand 
 ### Dockerization
 
 -   **Containerize the Application:** Dockerize the application to ensure it can run in a containerized environment. This includes creating a `Dockerfile` and possibly a `docker-compose.yml` if necessary, to define how the application should be built and run in Docker.
-
-
-Contribution Guidelines
------------------------
-
--   **Code Quality:** Write clean, scalable, and readable code that adheres to common C# coding standards.
--   **Testing:** Include unit tests for new features to ensure reliability and help prevent future regressions.
--   **Documentation:** Update documentation and comments as necessary to keep them relevant to the code changes.

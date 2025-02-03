@@ -1,6 +1,29 @@
 @RealEstateListingApi_HostAddress = http://localhost:5236
 
+### Get All Listings
 GET {{RealEstateListingApi_HostAddress}}/listings/
 Accept: application/json
 
-###
+### Create a New Listing
+# @name createListing
+POST {{RealEstateListingApi_HostAddress}}/listings/
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "Beautiful House",
+  "price": 300000.00,
+  "description": "A lovely house with a garden."
+}
+
+### Get Listing by ID
+# @name getListingById
+//@id = 6ed97dcf-bc96-4c5c-8ffc-4503abe3de88
+GET {{RealEstateListingApi_HostAddress}}/listings/{{id}}
+Accept: application/json
+
+### Delete Listing
+# @name deleteListing
+@id = 6ed97dcf-bc96-4c5c-8ffc-4503abe3de88
+DELETE {{RealEstateListingApi_HostAddress}}/listings/{{id}}
+Accept: application/json
